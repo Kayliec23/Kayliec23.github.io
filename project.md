@@ -24,7 +24,7 @@ Overall 344 samples were taken, and data was collected of nine different feature
 
 The pairwise relationship between the features for each species group is highlighted in Fig.2.
 
-![](assets/IMG/pairplot.png){: width="50" }
+![](assets/IMG/pairplot-3.png){: width="50" }
 
 *Figure 2: Pairwise relationships between features for the three different penguin species: adelie (0), gentoo (1) and chinstrap (2).*
 
