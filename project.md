@@ -14,11 +14,13 @@ We did this to solve the problem. We concluded that...
 
 ## Data
 
-Here is an overview of the dataset, how it was obtained and the preprocessing steps taken, with some plots!
+The data for this study was collected from penguins nesting on three islands within the Palmer Archipelago (Biscoe, Torgersen and Dream), near Anvers Island, Antarctica. The data was collected during three austral summers between 2007-2010, which is the penguins nesting time. Additionally, the data was collected from three penguin species: Adelie, Chinstrap and Gentoo. Fig.1 shows a pie chart of the distrubtion of these species.  
 
 ![](assets/IMG/pie.png){: width="50" }
 
 *Figure 1: Distrubtion of the three different penguin species exmained in this data: adelie, chinstrap and gentoo.*
+
+
 
 ## Modelling
 
