@@ -18,7 +18,7 @@ Here is an overview of the dataset, how it was obtained and the preprocessing st
 
 ![](assets/IMG/pie.png){: width="50" }
 
-*Figure 1: Here is a caption for my diagram. This one shows a pengiun [1].*
+*Figure 1: Distrubtion of the three different penguin species exmained in this data: adelie, chinstrap and gentoo.*
 
 ## Modelling
 
