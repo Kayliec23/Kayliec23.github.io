@@ -20,7 +20,13 @@ The data for this study was collected from penguins nesting on three islands wit
 
 *Figure 1: Distrubtion of the three different penguin species exmained in this data: adelie, chinstrap and gentoo.*
 
+Overall 344 samples were taken, and data was collected of nine different features: species, region, island, individual IDs, nesting stage, clutch completion, egg date, culmen length, culmen depth, flipper length, body mass, sex, and carbon and nitrogen isotopes from blood samples. For this project we are not interested in the nesting properties, but rather the physical and chemical penguin properties. Thus, we've disposed data of the individual IDs, nesting stage, clutch completion and egg date. Additionally, samples with missing data were disposed as well, the dataset decreasing to a sample size of 330. 
 
+The pairwise relationship between the features for each species group is highlighted in Fig.2.
+
+![](assets/IMG/pairplot.png){: width="50" }
+
+*Figure 2: Pairwise relationships between features for the three different penguin species: adelie (0), gentoo (1) and chinstrap (2).*
 
 ## Modelling
 
