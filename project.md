@@ -62,9 +62,11 @@ Here we evaluated the models' accuracy for species, islands and sex. Additionall
 
 We examined the logistic regression model's ability to accurately predict the probability of the three different penguin species -- Adelie, Gentoo and Chinstrap -- based on the independent variables. We found that the accuracy score was 100\%. We've also examined the confusion matrix, plotted in Fig. 7. The results indicate that all penguin species are identified correctly.
 
-![](assets/IMG/pairplot_sex.png)
+![](assets/IMG/confusionMatrix.png)
 
-*Figure 6: Pairwise relationships between features for the two penguin sexes: male (0) and female (1).*
+*Figure 7: Confusion matrix evaluating logistic regression model predicting species.*
+
+The neural network performs well for the species output, with an accuracy of $98.48\%$. There are overall only 4 mislabeled cases, one Adelie mislabeled as Gentoo and three more mislabeled as Chinstrap.
 
 ## Discussion
 
