@@ -1,68 +1,102 @@
-**Hi class, welcome to the AOS C111/204 final project!** <img align="right" width="220" height="220" src="/assets/IMG/template_logo.png">
+## My Project
 
-For this project, you will be applying your skills to train a machine learning model using real-world data, then publishing a report on your own website.
-
-* To get data for your project, you could:
-  * use **your own data** from a separate research activity
-  * **scour the internet** to find something original, then preprocess it yourself - see the Module Overview on BruinLearn for some resources
-  * browse an archive of data designed for machine learning problems, such as the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/datasets)
-
-* Your report should be in the region of 2000-2500 words with three to four figures, and written in a scientific language and style. [This template page](/project.md) gives an example structure that you could use, but feel free to make it your own.
-
-Your website will be a great addition to your CV, and a place to host future projects too since it doubles as a GitHub repository. The first step is to set up a project website like this one by following the instructions below. 
-
-## How does this website work?
-
-First, check out the Github repository for this site: [https://github.com/atmosalex/atmosalex.github.io/](https://github.com/atmosalex/atmosalex.github.io/).
-
-Using GitHub pages, you can write a website using markdown syntax - the same syntax we use to write comments in Google Colab notebooks. GitHub pages then takes the markdown file and renders it as a web page using a Jekyll theme. The markdown source code for this page [is shown here](https://github.com/atmosalex/atmosalex.github.io/blob/main/README.md?plain=1).
-
-## Setting up your Project Website
-
-### How to copy this site as a template
-1. Create [a GitHub account](https://github.com/)
-2.	Create a new GitHub repository with the name **username.github.io**, where **username** is your GitHub username as shown below. Select *public* and do not tick *Add a README file*. [![screenshot][1]][1]
-3.	From your new repository, you should see a *Quick setup* guide. Scroll down to the bottom of the page and click *Import code*, as shown: [![screenshot][2]][2]
-4.	In the box that says *Your old repository’s clone URL*, copy and paste this URL: `https://github.com/atmosalex/atmosalex.github.io/`, then proceed.
-5.	Go to the *Settings* tab, then click *Pages* (under *Code and automation*), and check that the *Build and deployment* section looks like this: [![screenshot][3]][3]
-6.	If you can see the *Actions* tab, click it and check that the build and deployment action has finished. Once it has, navigate to **[username].github.io** to see your site, which should be a copy of this one! If you cannot see an *Actions* tab, just wait a few minutes then go to your URL to check it is live.
-
-Now you are ready to customize your site! To add your name to the site, go to your Github page, edit `_config.yml`, and replace the temporary title with your name.
-
-[1]: /assets/IMG/instr_create.png
-[2]: /assets/IMG/instr_import.png
-[3]: /assets/IMG/instr_bd.png
-
-### How to change the theme (optional)
-1.	You can choose any theme [listed on this page](https://pages.github.com/themes/), though some do not work as well on mobile devices.
-2.	From GitHub, edit `_config.yml` and replace the `theme:` line with `theme: jekyll-theme-name` where `name` is the name of the theme from the above list. **For the `minima` theme, use a shortened preface like so `theme: minima`**, the others seem to need the whole preface `theme: jekyll-theme-`. You can check the *Actions* tab (as in step 6. above) to make sure the site is building successfully.
-
-### How to change your site logo (optional)
-1. Some themes, such as `jekyll-theme-minimal`, show a logo. In your repository, upload a logo or profile picture to the `assets/IMG/` directory
-2. Open `_config.yml` and modify the line `logo: /assets/IMG/template_logo.png` to point to your new image
+I applied machine learning techniques to investigate different classification models usingthe Palmer Penguin dataset.
 
 ***
 
-## Guide to Adding Content
-* Your repository's `README.md` file (the file you are reading now) acts like a home page. Replace its contents with whatever you want the world to see by editing the file on GitHub.
-* If you want to turn this page into a CV or blog, etc., it may be useful to refer to a [guide for writing Markdown](https://www.markdownguide.org/basic-syntax/).
-* You can create other markdown files (.md) in your repository and navigate to them from this page using links, i.e.: [here is a link to another file, `project.md`](project.md)
-* When editing a markdown file on GitHub, it is useful to wrap text by selecting the *Soft wrap* option as shown: ![screenshot](/assets/IMG/instr_wrap.png)
-* If you want to get even more technical, you can also write HTML in your .md files, and GitHub Pages will render it. For example, the image below is displayed by writing the following (edit this file to see!): `<img align="right" width="200" height="200" src="/assets/IMG/template_frog.png">`
-<img align="right" width="337" height="200" src="/assets/IMG/template_frog.png"> 
+## Introduction
 
-***
+In this study we will use the Palmer Penguin dataset [1] from the UCI Machine Learning Repository to evaluate and compare logistic regression model with Multi-Layer Perceptron (MLP) Classifier Neural Network. The purpose of this study is to compare the performance of the two models for binary classification as well as multi-classification. To do this we will examine three sets of outcomes: penguin species, geographical location of the penguins, and penguin sex. The first two outcomes can be classified into three classes, whereas the last into two.
 
-## Delivering your Project
+We concluded that overall the MLP Classifier NN performs better than the classical logitsic regression model, however, both show the best results for the "species" class. 
 
-Your final project is delivered in two components: a report and your code.
+## Data
 
-### Report
+The data for this study was collected from penguins nesting on three islands within the Palmer Archipelago (Biscoe, Torgersen and Dream), near Anvers Island, Antarctica. The data was collected during three austral summers between 2007-2010, during the penguins nesting time. This field work collected data from three penguin species: the Adelie, Chinstrap and Gentoo.  
 
-Your report should be **delivered via your website**. Submit a link to your website on BruinLearn so that your instructor can browse it to find your report. 
+![](assets/IMG/pie.png)
 
-To make this simple, you can write the report using a word processor or Latex, then export it as a .pdf file and upload it to the `assets` directory. You can then link to it [like so](/assets/project_demo.pdf). However, you can also type the report directly onto the website using another markdown page - [here is](/project.md) a template for that.
+*Figure 1: Distrubtion of the three different penguin species exmained in this data: Adelie, Gentoo, and Chinstrap.*
 
-### Code
+![](assets/IMG/pie_island.png)
 
-A link to your code must be submitted on BruinLearn, and the course instructor must be able to download your code to mark it. The code could be in a Google Colab notebook (make sure to *share* the notebook so access is set to **Anyone with the link**), or you could upload the code into a separate GitHub repository, or you could upload the code into the `assets` directory of your website and link to it. 
+*Figure 2: Distrubtion of the three different islands where penguin data was collected from: Biscoe, Torgersen, and Dream.*
+
+![](assets/IMG/pie_sex.png)
+
+*Figure 3: Distrubtion of the two penguin sexes exmained in this data: male and female.*
+
+Overall 344 samples were taken, and data was collected of nine different features: species, region, island, individual IDs, nesting stage, clutch completion, egg date, culmen length, culmen depth, flipper length, body mass, sex, and carbon and nitrogen isotopes from blood samples. For this project we are not interested in the nesting properties, but rather the physical and chemical penguin properties. Thus, we've disposed data of the individual IDs, nesting stage, clutch completion and egg date. Additionally, samples with missing data were disposed of, decreasing the dataset to a sample size of 330. The categorical values, such as the sex, island and species names, were converted to numerical integers (male = 0, female = 1; Biscoe = 0, Torgersen = 1, Dream = 2; Adelie = 0, Gentoo = 1, Chinstrap = 2). 
+Figs. 1,2 and 3 show pie charts of the distribution based on the penguin species, geographic region (islands) and sex. Pairwise relationship are also plotted, showing the relationship between the features for each categorical group of species, islands and sex in Figs. 4,5 and 6, respectively.
+We note a more defined grouping in the case of species (Fig. 4), especially with physical attributes such as the culmen length and depth, as well as the chemical attribute for carbon isotopes. On the other hand, this clear grouping can't be seen for the islands feature, although penguins originating from Torgersen seem to have unique features in some of the cases (Fig. 5). Lastly, the sex feature also doesn't visually appear to be organized into distinguishable groups, although there seems to be a more organized grouping for the culmen length and depth (Fig. 6). These figures give us a sense of how well the model will perform based on the chosen output. Given these figures, visual conclusions would imply that a supervised model with an output category like species would yield better results.
+
+![](assets/IMG/pairplot-3.png)
+
+*Figure 4: Pairwise relationships between features for the three different penguin species: adelie (0), gentoo (1) and chinstrap (2).*
+
+![](assets/IMG/pairplot_island.png)
+
+*Figure 5: Pairwise relationships between features for the three different penguin species: Biscoe (0), Torgersen (1) and Dream (2).*
+
+![](assets/IMG/pairplot_sex.png)
+
+*Figure 6: Pairwise relationships between features for the two penguin sexes: male (0) and female (1).*
+
+## Modelling
+
+To determine the relationships between the independent and dependent variables, we will compare two models: the classic logistic regression model and a Multi-Layer Perceptron (MLP) classifier neural network. 
+
+Logistic regression models are supervised machine learning models that, unlike in linear regression models, are used for categorical data that deals with integer values. The species, sex and island data can be represented as integer values 0,1,2, etc. and therefore as categories . We note that for species and islands, there are three categorical classes, and therefore we used the multinomial fit in the logistic regression model. This is captured in Fig. 2, where we see a 'jump' in the data for these features. Unlike linear regression models that fit a slope to this data, logistic regression models are a classification model and use a tanh like function that can better represent the process of categorization into these groups.
+
+The second model is, firstly, a neural network. Therefore we need a neural network structure. The network is consists of three layers: the input layer, the hidden layer and the output layer. The input layer consists of the independent variables (culmen length, culmen depth, flipper length, body mass, sex, island, carbon isotope and nitrogen isotope). The hidden layer consists of three neurons and the output layer will have three in the cases of species and island, and 2 in the case of sex. These layers were chosen based on the rules of thumb taught in class. Mainly, I chose for the number of hidden neurons to be equal to 2/3 of the input and output neurons. For consistency, I approximated this as 8. 
+
+As part of the neural network, we use the Multi-Layer Percepton (MLP) Classifier. The MLP Classifier is a supervised learning algorithm that trains using gradient descent in the form of a stochastic gradient-based optimizer, where the gradients are calculated using backpropagation.The activation function used in the hidden layer is the rectified linear unit function.
+
+Lastly, the dataset was split into training and testing data.$20\%$ of the data was reserved for checking the accuracy of the trained model, while the data was scaled independently when used as model input. 
+
+## Results
+
+Here we evaluated the models' accuracy for species, islands and sex. Additionally, in order to evaluate the performance of the classification, we used a confusion matrix, which is suited for classification models using supervised learning frameworks. These results will help us understand where the model has gone wrong, and allows for more transparency in case the model is falsely predicting the correct classification.
+
+### Species
+
+We examined the logistic regression model's ability to accurately predict the probability of the three different penguin species -- Adelie, Gentoo and Chinstrap -- based on the independent variables. We found that the accuracy score was 100\%. We've also examined the confusion matrix, plotted in Fig. 7. The results indicate that all penguin species are identified correctly.
+
+![](assets/IMG/confusionMatrix.png)
+
+*Figure 7: Confusion matrix evaluating logistic regression model predicting species.*
+
+The neural network performs well for the species output, with an accuracy of $98.48\%$, with only one Adelie pengui mislabeled as a Chinstrap penguin. Results of the confusion matrix can be seen in Fig. 8.
+
+![](assets/IMG/confusionMatrix_MPLC_sex-4.png)
+
+*Figure 8: Confusion matrix evaluating MLP Classier NN predicting species.*
+
+### Islands
+Interestingly, when we move to classifying by the geographical setting, i.e., the islands, the model's accuracy significantly reduces. In the logistic regression model,the value reduces to $69.70\%$. To avoid reptition, we will not plot the confusion matrix again, but note that there are a fair amount of instances that are mislabeled, where the most amount of errors that arise are due to Dream being predicted as Torgersen. Similar to the logistic regression model, the neural network does a somewhat decent job at categorizing islands, but is not excellent, with an accuracy of $68.18\%$. Most of the errors come from mislabeling 9 cases Torgersen as Dream and another 8 of Biscoe as Dream.
+
+### Sex
+
+Lastly we evaluated the model when classifying based on the penguin's sex: male or female. The accuracy of the logsitic regression model is 78.79\%. The model has five cases where females are mislabeled as male, and nine cases where males are mislabeled as females. The MLP Classifer NN performs better, with an accuracy of 87.88\% and five males mislabeled as male and 3 females mislabeled as male. 
+
+## Discussion
+
+On the whole, the logistic regression model performed slightly better than the multi-layer perceptron (MLP) classifier neural network (NN). We mainly see a difference for the classifying case of penguin sex. Both models scored relatively low accuracy for the island and penguin sex category, although their confusion matrices weren't behviorally similar. Most of the errors in the MLP classifier NN were because the model falsely labeled instances as Dream Island. However, for the linear regression model the instances mislabeled were randomly scattered in the confusion matrix. This leads me to believe that the MLP classifier NN perhaps could be fixed with some finer tuning, since the error seems to have a pattern where most mislabeled instances belong to Dream Island. It's worth keeping in mind that when we look at the pair relationship plots for islands, the relationship between the features and the penguins' geographic location, visually there appears to be a weaker relationship, and so perhaps it would be worth examining a subset of input features. 
+
+The confusion matrices for the penguin sex category had errors split quite evenly for the MLP classifier NN, but the logistic regression model leaned more heavily towards errors where females were mislabeled as males. Perhaps this is indictive of better tuning needed, however, the MLP Classifer NN does  sigificantly better job tha the logistic regression model at predict penguin sex and perhaps should be the prefered model for this. Noticeably, this is the category with only two classes, and raises the question whether perhaps the MLP Classifier NN performs better for smaller class groups. 
+
+It is worth noting, in both the sex and island categories, but in particular with the penguin sex category, changing the size of the hidden layer affected the results greatly. In another run with a hidden layer = 3, the accuracy dropped to 68.36% , indicating the importance of the hidden layer size. 
+
+On the other hand, the species category scored very high in both models, with the logistic regression model scoring 100% accuracy, and the MLP classifier NN ~98%. While it is interesting that the logistic regression scored so highly and that the MLP classifier NN scored lower, they both still scored very highly, thus we can conclude that both models would be appropriate for categorizing the penguin species.
+
+## Conclusion
+
+In this study we've used the Palmer penguins dataset to evaluate a logistic regression model and a multi-layer perceptron (MLP) classifier neural network (NN). We not only compared the models, but we evaluated how the models perform for different output categories with different class sizes. 
+
+Both models performed very well when classifying for penguin species, but less so for penguin sex and the penguin's geographical locations. We saw that, overall, the MLP Classifer NN performed slightly better than the MLP classifier NN. That being said, future work should experiment the the MLP classifier NN. For instance, we had shown in the one example of penguin sex that changing the hidden layer size dramatically changes the results. This is consistent with results we found in our homework assignments, and perhaps should be tested for the categories that perform less well, like the islands. Other noteworthy changes to explore would be the activation function within the hidden layer, the chosen solver for the weight optimization, or the strength of the L2 regularization term. Additionally, the dataset can be filtered into a smaller subset of independent variables, or examined based on scientific attributes (e.g. "physical" (culmen length, culmen depth, flipper length, body mss) and "chemical" (carbon and nitrogen isotopes) attributes). Filtering the input variables might also affect the model performance.
+
+## References
+[1] Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. doi:10.5281/zenodo.3960218, R package version 0.1.0, https://allisonhorst.github.io/palmerpenguins/.
+
+[back](./)
+
