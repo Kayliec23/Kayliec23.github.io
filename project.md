@@ -4,17 +4,15 @@ I applied machine learning techniques to investigate... Below is my report.
 
 ***
 
-## Introduction 
+## Introduction
 
-Here is a summary description of the topic. Here is the problem. This is why the problem is important.
+In this study we will use the Palmer penguin dataset from the UCI Machine Learning Repository to evaluate and compare logistic regression model with Multi-Layer Perceptron (MLP) Classifier Neural Network. The purpose of this study is to compare the performance of the two models for binary classification as well as multi-classification. To do this we will examine three sets of outcomes: penguin species, geographical location of the penguins, and penguin sex. The first two outcomes can be classified into three classes, whereas the last into two.
 
-There is some dataset that we can use to help solve this problem. This allows a machine learning approach. This is how I will solve the problem using supervised/unsupervised/reinforcement/etc. machine learning.
-
-We did this to solve the problem. We concluded that...
+We concluded that overall the MLP Classifier NN performs better than the classical logitsic regression model, however, both show the best results for the "species" class. 
 
 ## Data
 
-The data for this study was collected from penguins nesting on three islands within the Palmer Archipelago (Biscoe, Torgersen and Dream), near Anvers Island, Antarctica. The data was collected during three austral summers between 2007-2010, which is the penguins nesting time. Additionally, the data was collected from three penguin species: Adelie, Chinstrap and Gentoo. Fig.1 shows a pie chart of the distrubtion of these species.  
+The data for this study was collected from penguins nesting on three islands within the Palmer Archipelago (Biscoe, Torgersen and Dream), near Anvers Island, Antarctica. The data was collected during three austral summers between 2007-2010, during the penguins nesting time. This field work collected data from three penguin species: the Adelie, Chinstrap and Gentoo.  
 
 ![](assets/IMG/pie.png){: width="50" }
 
