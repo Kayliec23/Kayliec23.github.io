@@ -14,15 +14,15 @@ We concluded that overall the MLP Classifier NN performs better than the classic
 
 The data for this study was collected from penguins nesting on three islands within the Palmer Archipelago (Biscoe, Torgersen and Dream), near Anvers Island, Antarctica. The data was collected during three austral summers between 2007-2010, during the penguins nesting time. This field work collected data from three penguin species: the Adelie, Chinstrap and Gentoo.  
 
-![](assets/IMG/pie.png){: width="30" }
+![](assets/IMG/pie.png)
 
 *Figure 1: Distrubtion of the three different penguin species exmained in this data: Adelie, Gentoo, and Chinstrap.*
 
-![](assets/IMG/pie_island.png){: width="30" }
+![](assets/IMG/pie_island.png)
 
 *Figure 1: Distrubtion of the three different islands where penguin data was collected from: Biscoe, Torgersen, and Dream.*
 
-![](assets/IMG/pie_sex.png){: width="50" }
+![](assets/IMG/pie_sex.png)
 
 *Figure 1: Distrubtion of the two penguin sexes exmained in this data: male and female.*
 
