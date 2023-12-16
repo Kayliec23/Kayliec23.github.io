@@ -87,7 +87,7 @@ The confusion matrices for the penguin sex category had errors split quite evenl
 
 It is worth noting, in both the sex and island categories, but in particular with the penguin sex category, changing the size of the hidden layer affected the results greatly. In another run with a hidden layer = 3, the accuracy dropped to 68.36% , indicating the importance of the hidden layer size. 
 
-On the other hand, the species category scored very high in both models, with the logistic regression model scoring $100\%$ accuracy, and the MLP classifier NN ~98%. While it is interesting that the logistic regression scored so highly and that the MLP classifier NN scored lower, they both still scored very highly, thus we can conclude that both models would be appropriate for categorizing the penguin species.
+On the other hand, the species category scored very high in both models, with the logistic regression model scoring 100% accuracy, and the MLP classifier NN ~98%. While it is interesting that the logistic regression scored so highly and that the MLP classifier NN scored lower, they both still scored very highly, thus we can conclude that both models would be appropriate for categorizing the penguin species.
 
 ## Conclusion
 
