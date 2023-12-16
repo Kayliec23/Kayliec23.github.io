@@ -6,7 +6,7 @@ I applied machine learning techniques to investigate... Below is my report.
 
 ## Introduction
 
-In this study we will use the Palmer penguin dataset from the UCI Machine Learning Repository to evaluate and compare logistic regression model with Multi-Layer Perceptron (MLP) Classifier Neural Network. The purpose of this study is to compare the performance of the two models for binary classification as well as multi-classification. To do this we will examine three sets of outcomes: penguin species, geographical location of the penguins, and penguin sex. The first two outcomes can be classified into three classes, whereas the last into two.
+In this study we will use the Palmer Penguin dataset [1] from the UCI Machine Learning Repository to evaluate and compare logistic regression model with Multi-Layer Perceptron (MLP) Classifier Neural Network. The purpose of this study is to compare the performance of the two models for binary classification as well as multi-classification. To do this we will examine three sets of outcomes: penguin species, geographical location of the penguins, and penguin sex. The first two outcomes can be classified into three classes, whereas the last into two.
 
 We concluded that overall the MLP Classifier NN performs better than the classical logitsic regression model, however, both show the best results for the "species" class. 
 
@@ -58,7 +58,7 @@ Lastly, the dataset was split into training and testing data.$20\%$ of the data 
 
 Here we evaluated the models' accuracy for species, islands and sex. Additionally, in order to evaluate the performance of the classification, we used a confusion matrix, which is suited for classification models using supervised learning frameworks. These results will help us understand where the model has gone wrong, and allows for more transparency in case the model is falsely predicting the correct classification.
 
-# Species
+### Species
 
 We examined the logistic regression model's ability to accurately predict the probability of the three different penguin species -- Adelie, Gentoo and Chinstrap -- based on the independent variables. We found that the accuracy score was 100\%. We've also examined the confusion matrix, plotted in Fig. 7. The results indicate that all penguin species are identified correctly.
 
@@ -68,24 +68,34 @@ We examined the logistic regression model's ability to accurately predict the pr
 
 The neural network performs well for the species output, with an accuracy of $98.48\%$, with only one Adelie pengui mislabeled as a Chinstrap penguin. Results of the confusion matrix can be seen in Fig. 8.
 
-![](assets/IMG/confusionMatrix_MLPC_sex-4.png)
+![](assets/IMG/confusionMatrix_MPLC_sex-4.png)
 
 *Figure 8: Confusion matrix evaluating MLP Classier NN predicting species.*
 
+### Islands
+
+### Sex
+
+Lastly we evaluated the model when classifying based on the penguin's sex (male or female). The accuracy of this model is 78.79\%. The model has five cases where females are mislabeled as male, and nine cases where males are mislabeled as females. The MLP Classifer NN performs better, with an accuracy of 87.88\% and five males mislabeled as male and 3 females mislabeled as male. 
+
 ## Discussion
 
-From Figure X, one can see that... [interpretation of Figure X].
+On the whole, the logistic regression model performed slightly better than the multi-layer perceptron (MLP) classifier neural network (NN). Both cases scored relatively low accuracy for the island and penguin sex category, although their confusion matrices weren't similar. Most of the errors in the MLP classifier NN were because the model falsely labeled instances as Dream Island. However, for the linear regression model the instances mislabeled were randomly scattered in the confusion matrix. This leads me to believe that the MLP classifier NN perhaps could be fix with some finer tuning, since the error seems to have a pattern where most mislabeled instances belong to Dream Island. It's worth keeping in mind that when we look at the pair relationship plots for islands, the relationship between the features and the penguins' geographic location it visually appears to be a weaker relationship, and so perhaps it would be worth examining a subset of input features. 
+
+The confusion matrices for the penguin sex category had errors split quite evenly for the logistic regression model, but in the MLP classifier NN leaned more heavily towards errors where females were mislabeled as males. This heavy bias indicates that perhaps the NN can be better tuned.  
+
+In both these cases, in particular with the penguin sex category, changing the size of the hidden layer affected the results greatly. In another run with a hidden layer = 30, the accuracy grew to $86.36\%$ , indicating that the MLP classifier NN can indeed be better tuned. 
+
+On the other hand, the species category scored very high in both models, with the logistic regression model scoring $100\%$ accuracy, and the MLP classifier NN $\approx 95\%$. While it is interesting that the logistic regression scored so highly and that the MLP classifier NN scored lower, since they both scored very highly, we can conclude that both models would be appropriate for categorizing the penguin species.
 
 ## Conclusion
 
-Here is a brief summary. From this work, the following conclusions can be made:
-* first conclusion
-* second conclusion
+In this study we've used the Palmer penguins dataset to evaluate a logistic regression model and a multi-layer perceptron (MLP) classifier neural network (NN). We not only compared the models, but we evaluated how the models perform for different output categories with different class sizes. 
 
-Here is how this work could be developed further in a future project.
+Both models performed very well when classifying for penguin species, but less so for penguin sex and the penguin's geographical locations. We saw that, overall, the logistic regression model actually performed slightly better than the MLP classifier NN. That being said, future work should experiment the the MLP classifier NN. For instance, we had shown in the one example of penguin sex that changing the hidden layer size dramatically improves the results. This is consistent with results we found in our homework assignments. Other noteworthy changes to explore would be the activation function within the hidden layer, the chosen solver for the weight optimization, or the strength of the L2 regularization term. Additionally, the dataset can be filtered into a smaller subset of independent variables, or examined based on scientific attributes (e.g. "physical" (culmen length, culmen depth, flipper length, body mss) and "chemical" (carbon and nitrogen isotopes) attributes). Filtering the input variables might also affect the model performance.
 
 ## References
-[1] DALL-E 3
+[1] Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. doi:10.5281/zenodo.3960218, R package version 0.1.0, https://allisonhorst.github.io/palmerpenguins/.
 
 [back](./)
 
