@@ -66,7 +66,11 @@ We examined the logistic regression model's ability to accurately predict the pr
 
 *Figure 7: Confusion matrix evaluating logistic regression model predicting species.*
 
-The neural network performs well for the species output, with an accuracy of $98.48\%$. There are overall only 4 mislabeled cases, one Adelie mislabeled as Gentoo and three more mislabeled as Chinstrap.
+The neural network performs well for the species output, with an accuracy of $98.48\%$, with only one Adelie pengui mislabeled as a Chinstrap penguin. Results of the confusion matrix can be seen in Fig. 8.
+
+![](assets/IMG/confusionMatrix_MLPC_sex-4.png)
+
+*Figure 8: Confusion matrix evaluating MLP Classier NN predicting species.*
 
 ## Discussion
 
