@@ -1,6 +1,6 @@
 ## My Project
 
-I applied machine learning techniques to investigate... Below is my report.
+I applied machine learning techniques to investigate different classification models usingthe Palmer Penguin dataset.
 
 ***
 
